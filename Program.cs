@@ -1,39 +1,21 @@
 ﻿using System;
-using System.Globalization;
 
-namespace Worker
+namespace Human
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n;
-                Worker worker= new Worker("Artur Pirozkov", 2010, 10, new Company("ISM", "Programmer", 15000));
-                //Console.WriteLine($"{worker1.GetName()}, {worker1.GetYear()}, {worker1.GetMounth()}, {worker1.GetWorkPlace()}");
-               // Worker worker2 = new Worker("Trap Pirogov", 2012, 1, new Company("ISM", "Programmer", 15000));
-                //Console.WriteLine($"{worker2.GetName()}, {worker2.GetYear()}, {worker2.GetMounth()}, {worker2.GetWorkPlace()}");
-                //Worker worker3 = new Worker(worker1);
-                //Console.WriteLine($"{worker3.GetName()}, {worker3.GetYear()}, {worker3.GetMounth()}, {worker3.GetWorkPlace()}");
-            
-        }
-        static void ReadWorkersArray(ref int n, params Worker []a)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                a[i] = Console.ReadLine();
-            }
-        }
-        static void PrintWorker(ref Worker worker)
-        {
-            Console.WriteLine($"{worker.GetName()}, {worker.GetYear()}, {worker.GetMounth()}, {worker.GetWorkPlace()}");
-        }
-        static void PrintWorkers(ref int n, out int c=Salary, params Worker []b)
-        {
-            c = Salary;
-            for (int i = 0; i < n; i++)
-            {
-                if (b[i] > c) c = Salary;
-            }
+            Human hum1 = new Human("Nya", "Tyan", "10.3.2002");
+            Console.WriteLine($"{hum1.Name} {hum1.LastName}, {hum1.DateBirth}");
+            Abiturient abi1 = new Abiturient("Nyan", "Tyan", "25.3.2000", 180, 9.5, "School 21");
+            Console.WriteLine($"{abi1.Name} {abi1.LastName}, {abi1.DateBirth}, {abi1.BalSertificate}, {abi1.BalDocument}, {abi1.NameSchool}");
+            Student student1 = new Student("Nyan", "Tyan", "25.3.2000", "first", "IPZ-19-2", "FIKT",  "KPI");
+            Console.WriteLine($"{student1.Name} {student1.LastName}, {student1.DateBirth}, {student1.Course}, {student1.Group}, {student1.Faculty}, {student1.NameVNZ}");
+            Proffesor prof1 = new Proffesor("Nyan", "Tyan", "25.3.1995", "teacher", "Computer Science", "ZDU");
+            Console.WriteLine($"{prof1.Name} {prof1.LastName}, {prof1.DateBirth}, {prof1.Position}, {prof1.Cafedra}, {prof1.NameVNZ}");
+            Library_user user1 = new Library_user("Charlie", "Tyan", "25.3.2003", 1500674329, "13.8.2015", 1000);
+            Console.WriteLine($"{user1.Name} {user1.LastName}, {user1.DateBirth}, {user1.Number}, {user1.Date}, {user1.Vnesok}");
         }
     }
 }
